@@ -1,5 +1,6 @@
 package kz.course.lessonbymari;
 
+import androidx.annotation.IntegerRes;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -9,10 +10,14 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    String birinshinum,znak,zapisText,ekinshinum;
 
     Button button7, button8, button9, button4, button5, button6, button1, button2, button3, button0, button36;
-    TextView tvSan;
-    Button btndel, btnplusiminus;
+    TextView tvSan, tv_zapis;
+    Button btndel, btnplusiminus, btnplus, btnten, btnmin, btnX, btnbol;
+
+    
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +28,11 @@ public class MainActivity extends AppCompatActivity {
         btnplusiminus = findViewById(R.id.btnplusiminus);
         button8 = findViewById(R.id.btn8);
         button9 = findViewById(R.id.btn9);
+        btnplus = findViewById(R.id.btnplus);
+        btnbol = findViewById(R.id.btnbol);
+        btnX = findViewById(R.id.btnX);
+        btnmin = findViewById(R.id.btnmin);
+        btnten = findViewById(R.id.btnten);
         button4 = findViewById(R.id.btn4);
         button5 = findViewById(R.id.btn5);
         button6 = findViewById(R.id.btn6);
@@ -32,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         button0 = findViewById(R.id.btn0);
         button36 = findViewById(R.id.btn36);
         tvSan = findViewById(R.id.tv_san);
+        tv_zapis = findViewById(R.id.tv_zapis);
 
         View.OnClickListener buttonSandar = new View.OnClickListener() {
             @Override
@@ -158,6 +169,7 @@ public class MainActivity extends AppCompatActivity {
                 switch (view.getId()){
                     case R.id.btndel:
                         tvSan.setText("0");
+                        tv_zapis.setText("0");
                         break;
                     case R.id.btnplusiminus:
                         String santext = tvSan.getText().toString();
@@ -176,5 +188,101 @@ public class MainActivity extends AppCompatActivity {
         };
         btndel.setOnClickListener(btndelplusiminus);
         btnplusiminus.setOnClickListener(btndelplusiminus);
+        btnplus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                birinshinum = tvSan.getText().toString();
+
+                znak = "+";
+                zapisText = birinshinum + znak;
+                tv_zapis.setText(zapisText);
+                tvSan.setText("0");
+
+            }
+        });
+        btnmin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                birinshinum = tvSan.getText().toString();
+
+                znak = "-";
+                zapisText = birinshinum + znak;
+                tv_zapis.setText(zapisText);
+                tvSan.setText("0");
+
+            }
+        });
+        btnX.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                birinshinum = tvSan.getText().toString();
+
+                znak = "*";
+                zapisText = birinshinum + znak;
+                tv_zapis.setText(zapisText);
+                tvSan.setText("0");
+
+            }
+        });
+        btnbol.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                birinshinum = tvSan.getText().toString();
+
+                znak = "/";
+                zapisText = birinshinum + znak;
+                tv_zapis.setText(zapisText);
+                tvSan.setText("0");
+
+            }
+        });btnmin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                birinshinum = tvSan.getText().toString();
+
+                znak = "-";
+                zapisText = birinshinum + znak;
+                tv_zapis.setText(zapisText);
+                tvSan.setText("0");
+
+            }
+        });
+        btnten.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ekinshinum = tvSan.getText().toString();
+                if (znak.equals("+")) {
+                    int san1 = Integer.parseInt(birinshinum);
+                    int san2 = Integer.parseInt(ekinshinum);
+                    int res = san1 + san2;
+                    zapisText = birinshinum + znak + ekinshinum + " = " + res;
+                    tv_zapis.setText(zapisText);
+                    tvSan.setText("" + res);
+                } else if (znak.equals("-")) {
+                    int san1 = Integer.parseInt(birinshinum);
+                    int san2 = Integer.parseInt(ekinshinum);
+                    int res = san1 - san2;
+                    zapisText = birinshinum + znak + ekinshinum + " = " + res;
+                    tv_zapis.setText(zapisText);
+                    tvSan.setText("" + res);
+                } else if (znak.equals("*")) {
+                    int san1 = Integer.parseInt(birinshinum);
+                    int san2 = Integer.parseInt(ekinshinum);
+                    int res = san1 * san2;
+                    zapisText = birinshinum + znak + ekinshinum + " = " + res;
+                    tv_zapis.setText(zapisText);
+                    tvSan.setText("" + res);
+                } else if (znak.equals("/")) {
+                    int san1 = Integer.parseInt(birinshinum);
+                    int san2 = Integer.parseInt(ekinshinum);
+                    int res = san1 / san2;
+                    zapisText = birinshinum + znak + ekinshinum + " = " + res;
+                    tv_zapis.setText(zapisText);
+                    tvSan.setText("" + res);
+                }
+            }
+        });
+
+
     }
 }

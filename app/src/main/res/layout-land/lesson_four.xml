@@ -8,61 +8,54 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/tv_zapis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:paddingRight="10dp"
+        android:text="0"
+        android:textSize="20dp" />
+
+    <TextView
         android:id="@+id/tv_san"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="right"
         android:paddingRight="10dp"
-        android:text=""
-        android:textSize="50dp" />
+        android:text="0"
+        android:background="@color/teal_700"
+        android:textSize="30dp" />
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="710dp"
+        android:layout_height="400dp"
         android:layout_weight="1"
         android:orientation="horizontal">
 
         <Button
+            android:id="@+id/btndel"
             style="@style/buttom_number_style"
-            android:text="Del"
-            android:backgroundTint="@color/teal_200"
+            android:text="C"
+
             android:textColor="@color/black" />
 
         <Button
+            android:id="@+id/btnplusiminus"
             style="@style/buttom_number_style"
-            android:text="="
-            android:backgroundTint="@color/teal_200"
+            android:text="+/-"
+
             android:textColor="@color/black" />
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="horizontal">
 
         <Button
-            android:id="@+id/btn7"
-            android:backgroundTint="@color/teal_100"
+            android:id="@+id/btnprocent"
             style="@style/buttom_number_style"
-            android:text="7" />
+            android:text="%"
+
+            android:textColor="@color/black" />
 
         <Button
-            android:id="@+id/btn8"
-            android:backgroundTint="@color/teal_100"
-            style="@style/buttom_number_style"
-            android:text="8" />
-        />
-
-        <Button
-            android:id="@+id/btn9"
-            android:backgroundTint="@color/teal_100"
-            style="@style/buttom_number_style"
-            android:text="9" />
-
-        <Button
-            android:id="@+id/btnX"
+            android:id="@+id/btnbol"
             style="@style/buttom_number_style"
             android:text="/"
 
@@ -71,31 +64,60 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="710dp"
+        android:layout_height="400dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn7"
+            style="@style/buttom_number_style"
+            android:text="7" />
+
+        <Button
+            android:id="@+id/btn8"
+            style="@style/buttom_number_style"
+            android:text="8"/>
+
+
+        <Button
+            android:id="@+id/btn9"
+            style="@style/buttom_number_style"
+            android:text="9" />
+
+        <Button
+            android:id="@+id/btnX"
+            style="@style/buttom_number_style"
+            android:text="X"
+
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="710dp"
+        android:layout_height="400dp"
         android:layout_weight="1"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/btn4"
-            android:backgroundTint="@color/teal_100"
             style="@style/buttom_number_style"
             android:text="4" />
 
         <Button
             android:id="@+id/btn5"
-            android:backgroundTint="@color/teal_100"
             style="@style/buttom_number_style"
             android:text="5" />
-        />
+
 
         <Button
             android:id="@+id/btn6"
             style="@style/buttom_number_style"
-            android:backgroundTint="@color/teal_100"
             android:text="6" />
 
         <Button
+            android:id="@+id/btnmin"
             style="@style/buttom_number_style"
             android:text="-"
             android:textColor="@color/black" />
@@ -103,66 +125,65 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="710dp"
+        android:layout_height="400dp"
         android:layout_weight="1"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/btn1"
             style="@style/buttom_number_style"
-            android:backgroundTint="@color/teal_100"
             android:text="1" />
 
         <Button
             android:id="@+id/btn2"
             style="@style/buttom_number_style"
-            android:backgroundTint="@color/teal_100"
             android:text="2" />
-        />
 
         <Button
             android:id="@+id/btn3"
             style="@style/buttom_number_style"
-            android:backgroundTint="@color/teal_100"
             android:text="3" />
 
         <Button
-
-            style="@style/buttom_number_style"
-            android:text="x"
-            android:textColor="@color/black" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/btn0"
-            android:backgroundTint="@color/teal_100"
-            style="@style/buttom_number_style"
-            android:text="." />
-
-        <Button
-            android:backgroundTint="@color/teal_100"
-            style="@style/buttom_number_style"
-            android:text="0" />
-
-        <Button
-            android:id="@+id/btnPr"
-            style="@style/buttom_number_style"
-            android:text="%" />
-        />
-
-
-        <Button
+            android:id="@+id/btnplus"
             style="@style/buttom_number_style"
             android:text="+"
             android:textColor="@color/black" />
 
     </LinearLayout>
-</LinearLayout>
+    <LinearLayout
+        android:layout_width="710dp"
+        android:layout_height="400dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn0"
+            style="@style/buttom_number_style"
+            android:text="0" />
+        <Button
+            android:id="@+id/btn36"
+            style="@style/buttom_number_style"
+
+            android:text="."/>
+
+
+        <Button
+            android:id="@+id/btnten"
+            style="@style/buttom_number_style"
+            android:layout_width="136dp"
+            android:layout_height="match_parent"
+            android:text="="
+            android:textColor="@color/black" />
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+    </LinearLayout>

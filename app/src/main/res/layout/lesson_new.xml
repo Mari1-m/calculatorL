@@ -3,7 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    >
 
     <RelativeLayout
         android:id="@+id/real"
@@ -48,15 +49,22 @@
 
 
     <ImageView
-        android:id="@+id/imageView"
         android:layout_width="50dp"
         android:layout_height="50dp"
         app:srcCompat="@drawable/star_s"
         android:layout_marginTop="35dp"
         android:layout_marginLeft="100dp"
         android:scaleType="centerCrop" />
+
     <ImageView
-        android:id="@+id/imageView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:srcCompat="@drawable/newws"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="260dp"
+        android:scaleType="centerCrop" />
+
+    <ImageView
         android:layout_width="50dp"
         android:layout_height="50dp"
         app:srcCompat="@drawable/newws"
@@ -64,15 +72,6 @@
         android:layout_marginLeft="260dp"
         android:scaleType="centerCrop" />
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        app:srcCompat="@drawable/newws"
-        android:layout_marginTop="35dp"
-        android:layout_marginLeft="260dp"
-        android:scaleType="centerCrop" />
-    <ImageView
-        android:id="@+id/imageView"
         android:layout_width="50dp"
         android:layout_height="50dp"
         app:srcCompat="@drawable/newwws"
@@ -80,7 +79,6 @@
         android:layout_marginLeft="260dp"
         android:scaleType="centerCrop" />
     <TextView
-        android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="45dp"
@@ -92,7 +90,6 @@
         android:layout_alignTop="@id/real"
         android:text="250 ұпай" />
     <TextView
-        android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="45dp"
@@ -104,7 +101,6 @@
         android:layout_alignTop="@id/real"
         android:text="950 кітап" />
     <TextView
-        android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="105dp"
@@ -117,7 +113,6 @@
         android:text="бүгін" />
 
     <ImageView
-        android:id="@+id/imageView"
         android:layout_width="50dp"
         android:layout_height="50dp"
         app:srcCompat="@drawable/news"
@@ -125,7 +120,6 @@
         android:layout_marginLeft="100dp"
         android:scaleType="centerCrop" />
     <TextView
-        android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="105dp"

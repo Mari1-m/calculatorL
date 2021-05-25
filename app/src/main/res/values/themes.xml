@@ -19,7 +19,7 @@
         <item name="android:layout_height">match_parent</item>
         <item name="android:layout_weight">1</item>
         <item name="android:layout_margin">5dp</item>
-        <item name="android:textSize">27sp</item>
+        <item name="android:textSize">20sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:background">@drawable/button_basilganda</item>
         <item name="backgroundTint">@null</item>
